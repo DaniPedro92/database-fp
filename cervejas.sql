@@ -1,3 +1,5 @@
+DROP TABLE IF cervejas EXISTS
+
 CREATE TABLE cervejas (
     id SERIAL PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
