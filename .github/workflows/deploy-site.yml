@@ -45,5 +45,5 @@ jobs:
         run: |
           chmod 400 site_chave.pem
           ls -all
-          ssh -i "site_chave.pem" ubuntu@ec2-18-156-78-72.eu-central-1.compute.amazonaws.com "sudo echo 'Verificar se funciona.'"
+          ssh -i "site_chave.pem" ubuntu@ec2-18-156-78-72.eu-central-1.compute.amazonaws.com -t "mkdir /var/www/html/fp;"
           scp -i "site_chave.pem" ./index.html ubuntu@ec2-18-156-78-72.eu-central-1.compute.amazonaws.com:/var/www/html/fp/index.html
