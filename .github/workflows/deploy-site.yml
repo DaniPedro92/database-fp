@@ -40,12 +40,7 @@ jobs:
         run: |
           echo user db ${{ secrets.USER_PG }} 
           echo pass db ${{ secrets.PGPASSWORD }}
-          
-      - name: Set up SSH key
-        uses: webfactory/ssh-agent@v0.5.3
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-     
+               
       - name: Deploy site
         run: |
           chmod 600 site_chave.pem
